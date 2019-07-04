@@ -12,11 +12,11 @@ intergration {
             mavenArgs = ['-P jenkins-build -Dorg=fsplatform_snapshot']
         }
         
-        dockyard {
-            stageName = 'push release image to dockyard'
-            tags = version
-            buildImage = true
-            dockerFile = './ecs/Dockerfile'
-        }
+#        dockyard {
+#            stageName = 'push release image to dockyard'
+#            tags = version
+#            buildImage = true
+#            dockerFile = './ecs/Dockerfile'
+#        }
     }
 }
