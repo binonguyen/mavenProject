@@ -18,8 +18,8 @@
 //           buildImage = true
 //           dockerFile = './ecs/Dockerfile'
 //       }
-    }
-}
+ //   }
+//}
 pipeline {
     agent any
 
