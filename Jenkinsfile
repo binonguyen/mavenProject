@@ -1,16 +1,16 @@
-def version = params?.version
+//def version = params?.version
 
-branches {
-    snapshotBranch = 'master'
-}
+//branches {
+//    snapshotBranch = 'master'
+//}
 
-intergration {
-    snapshot {
-        maven {
-            goals = 'clean install'
-            mavenHome = '/opt/runtime/apache-maven-3.3.9'
-            mavenArgs = ['-P jenkins-build -Dorg=fsplatform_snapshot']
-        }
+//intergration {
+//    snapshot {
+//        maven {
+ //           goals = 'clean install'
+ //           mavenHome = '/opt/runtime/apache-maven-3.3.9'
+  //          mavenArgs = ['-P jenkins-build -Dorg=fsplatform_snapshot']
+//        }
         
 //       dockyard {
 //           stageName = 'push release image to dockyard'
@@ -18,5 +18,26 @@ intergration {
 //           buildImage = true
 //           dockerFile = './ecs/Dockerfile'
 //       }
+    }
+}
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
 }
