@@ -41,3 +41,7 @@ pipeline {
         }
     }
 }
+
+maven {
+ goals = 'clean install'
+}
